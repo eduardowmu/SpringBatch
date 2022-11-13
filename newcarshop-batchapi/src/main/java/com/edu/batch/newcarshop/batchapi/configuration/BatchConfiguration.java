@@ -1,6 +1,7 @@
 package com.edu.batch.newcarshop.batchapi.configuration;
 import com.edu.batch.newcarshop.batchapi.configuration.chuncklet.CarroItemProcessor;
 import com.edu.batch.newcarshop.batchapi.configuration.chuncklet.CarroItemReader;
+import com.edu.batch.newcarshop.batchapi.configuration.chuncklet.CarroItemWriter;
 import com.edu.batch.newcarshop.batchapi.configuration.tasklet.CarroValidateTasklet;
 import com.edu.batch.newcarshop.batchapi.dto.CarroDto;
 import com.edu.batch.newcarshop.batchapi.model.Carro;
@@ -14,7 +15,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.batch.item.ItemReader;
-import javax.batch.api.chunk.ItemWriter;
+import org.springframework.batch.item.ItemWriter;
 
 @Configuration
 @EnableBatchProcessing
@@ -43,9 +44,10 @@ public class BatchConfiguration {
     }
 
     @Bean
-    public Step carroEnriquecimentoChunckletStep(ItemReader<CarroDto> carroItemReader,
-                                                 ItemProcessor<CarroDto, Carro> carroItemProcessor,
-                                                 ItemWriter<Carro> carroItemWriter) {
+    public Step carroEnriquecimentoChunckletStep(
+            ItemReader<CarroDto> carroItemReader,
+            ItemProcessor<CarroDto, Carro> carroItemProcessor,
+            ItemWriter<Carro> carroItemWriter) {
         return stepBuilderFactory.get("carroEnriquecimentoChunckletStep")
                 .<CarroDto, Carro>chunk(5)
                 .reader(carroItemReader)

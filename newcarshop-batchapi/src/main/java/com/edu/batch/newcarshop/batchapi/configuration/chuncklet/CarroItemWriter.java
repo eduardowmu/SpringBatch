@@ -23,12 +23,18 @@ public class CarroItemWriter implements ItemWriter<Carro>, StepExecutionListener
 
     @Override
     public void beforeStep(StepExecution stepExecution) {
-        this.csvSavedCars = new CsvFileUtils("savedCars", false)
+        this.csvSavedCars = new CsvFileUtils("savedCars", false);
+        LOGGER.info("Finalizando o writer...");
     }
 
     @Override
     public ExitStatus afterStep(StepExecution stepExecution) {
-        return null;
+        try {
+            this.csvSavedCars.closeWriter();
+        } catch(IOException e) {
+            e.printStackTrace();
+        }
+        return ExitStatus.COMPLETED;
     }
 
     @Override

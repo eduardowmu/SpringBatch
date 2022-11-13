@@ -1,6 +1,7 @@
-package com.edu.batch.newcarshop.batchapi.model;
+package com.wordpress.carledwinti.newcarshop.batchapi.model;
 
-import com.edu.batch.newcarshop.batchapi.enums.LojaEnum;
+import com.wordpress.carledwinti.newcarshop.batchapi.enums.LojaEnum;
+
 import javax.persistence.*;
 import java.io.Serializable;
 import java.math.BigDecimal;
@@ -8,6 +9,7 @@ import java.util.Date;
 
 @Entity
 public class Carro implements Serializable {
+
     private static final long serialVersionUID = 2l;
 
     @Id
