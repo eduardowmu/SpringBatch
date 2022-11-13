@@ -1,5 +1,4 @@
 package com.edu.batch.newcarshop.batchapi.configuration;
-
 import com.edu.batch.newcarshop.batchapi.configuration.chuncklet.CarroItemProcessor;
 import com.edu.batch.newcarshop.batchapi.configuration.chuncklet.CarroItemReader;
 import com.edu.batch.newcarshop.batchapi.configuration.tasklet.CarroValidateTasklet;
@@ -65,6 +64,7 @@ public class BatchConfiguration {
         return new CarroItemProcessor();
     }
 
+    @Bean
     public ItemWriter<Carro> carroItemWriter() {
         return new CarroItemWriter();
     }
