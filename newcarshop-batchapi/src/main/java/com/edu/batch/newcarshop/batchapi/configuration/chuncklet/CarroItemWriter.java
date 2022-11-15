@@ -10,6 +10,7 @@ import org.springframework.batch.core.StepExecution;
 import org.springframework.batch.core.StepExecutionListener;
 import org.springframework.batch.item.ItemWriter;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.annotation.Bean;
 
 import java.io.IOException;
 import java.util.List;
@@ -39,7 +40,7 @@ public class CarroItemWriter implements ItemWriter<Carro>, StepExecutionListener
 
     @Override
     public void write(List<? extends Carro> list) {
-        List<? extends Carro> savedCarroList = this.carroRepository.saveAll(list);
+        List<? extends Carro> savedCarroList = carroRepository.saveAll(list);
 
         savedCarroList.stream().forEach(carro -> {
             try {
