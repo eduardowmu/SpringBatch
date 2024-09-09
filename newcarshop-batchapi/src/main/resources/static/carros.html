@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>NewCS - Batch Launcher</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" href="images/carro-logo.png" type="image/icon type">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="css/batch-laucher.css">
+</head>
+<body>
+
+<div class="menu">
+    <h1>New Car Shop</h1>
+    <p>Onde você encontra seu carro novo!</p>
+    <img src="images/carros14.png" />
+</div>
+
+<nav class="navbar navbar-inverse">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <a class="navbar-brand" href="#">NCS</a>
+        </div>
+        <ul class="nav navbar-nav">
+            <li class="active"><a href="http://localhost:8080">Home</a></li>
+            <li><a href="http://localhost:8080/carros.html" class="nav-link">Carros Cadastrados</a></li>
+            <li><a href="http://localhost:8080/h2-console" target="_blank" class="nav-link">Banco de Dados</a></li>
+        </ul>
+    </div>
+</nav>
+
+<div class="container-principal">
+    <table id="table-carros" class="table table-hover">
+        <thead>
+        <tr>
+            <th>Código</th>
+            <th>Renavam</th>
+            <th>Marca</th>
+            <th>Modelo</th>
+            <th>Ano Fabricação</th>
+            <th>Ano Modelo</th>
+            <th>Valor de Compra</th>
+            <th>Valor de Venda</th>
+            <th>% Desc.</th>
+            <th>Loja</th>
+            <th>Data de Cadastro</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td colspan="11" style="text-align: center;">Nenhum registro encontrado!</td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+
+<footer class="rodape">
+    <p>Copyright &copy; <a href="https://carledwinti.wordpress.com" target="_blank">Carl Edwin TI</a>  & <a href="https://www.colab55.com/@mly227" target="_blank">MLY</a></p>
+</footer>
+
+<script src="js/core.js"></script>
+</body>
+</html>

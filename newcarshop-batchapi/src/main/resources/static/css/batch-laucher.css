@@ -1,0 +1,44 @@
+.container-principal{
+    padding: 25px 25px 80px 25px;
+}
+
+.enriquecidos{
+    color: green;
+}
+
+
+.invalidos{
+    color: red;
+}
+
+.menu{
+    background-color: #fff;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: #dfe9ec;
+    text-align: center;
+    background-image: linear-gradient(to bottom right, gray, white);
+}
+
+.menu h1{
+    text-shadow: 2px 2px 2px black;
+    font-weight: bolder;
+}
+.menu p{
+    color: #000;
+}
+.rodape{
+    background-color: #33373a;
+    padding: 25px;
+    font-size: 12px;
+    color: #6f8597;
+    letter-spacing: 5px;
+    text-align: center;
+    margin-top: 15px;
+}
+.link-span{
+    color:#4a4ac9;
+}
+.executar-span{
+    color:#c52d2d;
+}

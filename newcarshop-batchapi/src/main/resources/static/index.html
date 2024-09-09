@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>NewCS - Batch Launcher</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="icon" href="images/carro-logo.png" type="image/icon type">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+        <link rel="stylesheet" href="css/batch-laucher.css">
+    </head>
+    <body>
+
+        <div class="menu">
+            <h1>New Car Shop</h1>
+            <p>Onde você encontra seu carro novo!</p>
+            <img src="images/carros14.png" />
+        </div>
+
+        <nav class="navbar navbar-inverse">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <a class="navbar-brand" href="#">NCS</a>
+                </div>
+                <ul class="nav navbar-nav">
+                    <li class="active"><a href="http://localhost:8080">Home</a></li>
+                    <li><a href="http://localhost:8080/carros.html" class="nav-link">Carros Cadastrados</a></li>
+                    <li><a href="http://localhost:8080/h2-console" target="_blank" class="nav-link">Banco de Dados</a></li>
+                </ul>
+                <button class="btn btn-danger navbar-btn" title="Ao acionar este botão o Batch será executado" onclick="executarJob();">Executar Job</button>
+            </div>
+        </nav>
+
+        <div class="container-principal">
+
+        <div id="alert-success" class="alert alert-success">
+            <strong>Success!</strong> Job executado com sucesso.
+        </div>
+        <div id="alert-fail" class="alert alert-danger">
+            <strong>Falha!</strong> Ocorreu uma falha ao tentar executar o Job.
+        </div>
+        <div id="alert-unexpected-fail" class="alert alert-warning">
+            <strong>Falha!</strong> Ocorreu um erro inesperado ao tentar executar o Job.
+        </div>
+
+            <h1>Batch Launcher</h1>
+            
+            <p>Este Sistema irá auxiliar os usuários do sistema a cadastrar automaticamente lotes de carros recebidos do fornecedor. Para isso basta executar os passos abaixo:</p>
+            
+            <ol>
+                <li>Importar o arquivo <b>.csv</b> a ser processado para o diretório <span class="link-span">/resources/csv/fileInput</span></li>
+                <li>Renomear o arquivo importado para <b>carros-import.csv</b></li>
+                <li>Iniciar a execução do <b>BATCH</b> executando o botão <span class="executar-span">Executar Job</span></li>
+                <li>A execução do <b>BATCH</b> pode gerar dois arquivos no diretório <span class="link-span">/resources/csv/fileOutput</span>:</li>
+                    <ul>
+                        <li>Arquivo de sucesso com registros <b class="enriquecidos">ENRIQUECIDOS</b>, ex.: savedCars-2020-06-06 18:45:49-.csv</li>
+                        <li>Arquivo de sucesso com registros <b class="invalidos">INVALIDOS</b>, ex.: invalid-import-2020-06-06 18:45:49-.csv</li>
+                    </ul>
+            </ol>
+
+        </div>
+    
+        <footer class="rodape">
+            <p>Copyright &copy; <a href="https://carledwinti.wordpress.com" target="_blank">Carl Edwin TI</a>  & <a href="https://www.colab55.com/@mly227" target="_blank">MLY</a></p>
+        </footer>
+
+    <script src="js/core.js"></script>
+    </body>
+</html>

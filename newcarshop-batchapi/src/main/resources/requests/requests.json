@@ -1,0 +1,8 @@
+Acessa a pagina inicial da API
+http://localhost:8080/api/home
+
+Executa o BATCH
+http://localhost:8080/api/batch
+
+Consulta os registros cadastrados no banco de dados
+http://localhost:8080/api/carros
